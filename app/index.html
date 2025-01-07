@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="IDKit">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <title>IDKit</title>
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    :root {
+      --sky-top: #FF7F50;
+      --sky-bottom: #FFF8DC;
+      --cloud-color: #FFE4E1;
+      --cloud-opacity: 0.9;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+      background: linear-gradient(to bottom, var(--sky-top), var(--sky-bottom));
+    }
+
+    #flutter-target {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    #flutter-target.visible {
+      opacity: 1;
+    }
+
+    .cloud {
+      background: var(--cloud-color);
+      border-radius: 50px;
+      position: absolute;
+      opacity: var(--cloud-opacity);
+      animation: moveCloud linear infinite;
+      z-index: 0;
+    }
+
+    .cloud::before,
+    .cloud::after {
+      content: '';
+      position: absolute;
+      background: inherit;
+      border-radius: 50%;
+    }
+
+    .cloud::before {
+      width: 50%;
+      height: 50%;
+      top: -25%;
+      left: 25%;
+    }
+
+    .cloud::after {
+      width: 30%;
+      height: 30%;
+      top: -15%;
+      right: 20%;
+    }
+
+    @keyframes moveCloud {
+      from {
+        transform: translateX(-150px);
+      }
+
+      to {
+        transform: translateX(calc(100vw + 150px));
+      }
+    }
+  </style>
+
+  <script>
+    if (typeof navigator.mediaDevices === 'undefined' || typeof navigator.mediaDevices.getUserMedia === 'undefined') {
+      navigator.mediaDevices = {};
+      navigator.mediaDevices.getUserMedia = function (constraints) {
+        var getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+        if (!getUserMedia) {
+          return Promise.reject(new Error('getUserMedia is not implemented in this browser'));
+        }
+        return new Promise(function (resolve, reject) {
+          getUserMedia.call(navigator, constraints, resolve, reject);
+        });
+      };
+    }
+  </script>
+</head>
+
+<body>
+  <div id="flutter-target"></div>
+
+  <script>
+    let cloudInterval;
+
+    // Color palette configuration
+    const updateColors = (colors = {}) => {
+      const root = document.documentElement;
+      root.style.setProperty('--sky-top', colors.skyTop || '#FF7F50');
+      root.style.setProperty('--sky-bottom', colors.skyBottom || '#FFF8DC');
+      root.style.setProperty('--cloud-color', colors.cloudColor || 'FFE4E1');
+      root.style.setProperty('--cloud-opacity', colors.cloudOpacity || '0.9');
+    };
+
+    const palettes = {
+      default: {
+        skyTop: '#FF7F50',     // Coral orange for top of sky
+        skyBottom: '#FFF8DC',  // Cream color for bottom gradient
+        cloudColor: '#FFE4E1', // Misty rose for clouds
+        cloudOpacity: '0.9'    // Slightly more opaque clouds
+      },
+      sunset: {
+        skyTop: '#FF8C42',
+        skyBottom: '#FFD5C2',
+        cloudColor: '#FFF1E6',
+        cloudOpacity: '0.9'
+      },
+      night: {
+        skyTop: '#1A237E',
+        skyBottom: '#3949AB',
+        cloudColor: '#B3E5FC',
+        cloudOpacity: '0.6'
+      }
+    };
+
+    function createCloud() {
+      const cloud = document.createElement('div');
+      cloud.className = 'cloud';
+
+      const size = Math.random() * 60 + 40;
+      cloud.style.width = size + 'px';
+      cloud.style.height = size / 2 + 'px';
+
+      const top = Math.random() * 70 + 10;
+      cloud.style.top = top + 'vh';
+
+      const duration = Math.random() * 20 + 20;
+      cloud.style.animationDuration = duration + 's';
+
+      document.body.appendChild(cloud);
+
+      setTimeout(() => {
+        cloud.remove();
+      }, duration * 1000);
+    }
+
+    function removeAllClouds() {
+      const clouds = document.querySelectorAll('.cloud');
+      clouds.forEach(cloud => cloud.remove());
+    }
+
+    // Create initial clouds
+    for (let i = 0; i < 15; i++) {
+      const cloud = document.createElement('div');
+      cloud.className = 'cloud';
+
+      const size = Math.random() * 60 + 40;
+      cloud.style.width = size + 'px';
+      cloud.style.height = size / 2 + 'px';
+
+      const top = Math.random() * 70 + 10;
+      cloud.style.top = top + 'vh';
+
+      const duration = Math.random() * 20 + 20;
+      cloud.style.animationDuration = duration + 's';
+
+      cloud.style.left = (Math.random() * 100) + 'vw';
+
+      document.body.appendChild(cloud);
+    }
+
+    // Create new clouds frequently
+    cloudInterval = setInterval(createCloud, 1500);
+
+    // When Flutter is initialized, make it visible and remove clouds
+    window.addEventListener('flutter-first-frame', function () {
+      document.getElementById('flutter-target').classList.add('visible');
+      // Clear the interval that creates new clouds
+      clearInterval(cloudInterval);
+      // Remove all existing clouds
+      removeAllClouds();
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+
+</html>

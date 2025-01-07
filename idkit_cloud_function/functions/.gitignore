@@ -1,0 +1,4 @@
+node_modules/
+*.local
+**/functions/exported-dev-data/
+**/exported-dev-data/

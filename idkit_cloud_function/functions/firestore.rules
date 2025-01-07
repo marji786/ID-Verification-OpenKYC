@@ -1,0 +1,121 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Authentication and role validation
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isAdmin() {
+      return isAuthenticated() && 
+             request.auth.uid == "hyMkyORnSXXw9zw1mBZilmjv5V12";
+    }
+    
+    function isModerator() {
+      return isAuthenticated() && request.auth.token.role == 'moderator';
+    }
+    
+    function isModeratorOrAdmin() {
+      return isAdmin() || isModerator();
+    }
+    
+    function isOwner(docData) {
+      return isAuthenticated() && 
+             docData.anonymous_user_id == request.auth.uid;
+    }
+
+    // Session state validation
+    function isNotStartedStatus() {
+      return resource.data.status == "NOT_STARTED";
+    }
+    
+    function isStatusModifiable() {
+      return resource.data.status == "NOT_STARTED" || 
+             resource.data.status == "IN_PROGRESS";
+    }
+
+    // Validate session document updates
+    function isValidDocumentUpdate() {
+      let allowedFields = [
+        'status',
+        'updated_at',
+        'id_image_front_base64',
+        'id_image_back_base64',
+        'face_image_base64'
+      ];
+      
+      let updates = request.resource.data.diff(resource.data).affectedKeys();
+      let currentStatus = resource.data.status;
+      let newStatus = request.resource.data.status;
+      
+      return currentStatus == "NOT_STARTED" && 
+             newStatus == "IN_PROGRESS" &&
+             updates.hasOnly(allowedFields);
+    }
+
+    // Session claiming validation
+    function isValidClaimOperation() {
+      let claimingUser = request.resource.data.anonymous_user_id == request.auth.uid;
+      let onlyUpdatingAllowedFields = request.resource.data.diff(resource.data).affectedKeys()
+        .hasOnly(['anonymous_user_id', 'last_accessed']);
+      
+      return isAuthenticated() &&
+             isNotStartedStatus() &&
+             claimingUser &&
+             onlyUpdatingAllowedFields;
+    }
+
+    // Collections
+    match /sessions/{sessionId} {
+      // Read permissions
+      allow get: if isAuthenticated() && (
+                   isNotStartedStatus() ||        // Allow reading unclaimed sessions
+                   isOwner(resource.data) ||      // Allow owners to read their sessions
+                   isModeratorOrAdmin()           // Allow moderators and admins to read any session
+                 );
+      
+      // Allow moderators and admins to list sessions
+      allow list: if isModeratorOrAdmin();
+      
+      // Update permissions
+      allow update: if isAuthenticated() && (
+                     isValidClaimOperation() ||   // Allow claiming NOT_STARTED sessions
+                     (isOwner(resource.data) &&   // Allow document updates with status change
+                      isValidDocumentUpdate()) || 
+                     isModeratorOrAdmin()         // Allow moderators and admins to update any fields
+                   );
+      
+      // Only admins can create or delete sessions            
+      allow create, delete: if isAdmin();
+    }
+    
+    match /sessions/{sessionId}/images/{imageID} {
+      allow read, write: if isModeratorOrAdmin();
+    }
+    
+    // Moderators collection
+    match /moderators/{moderatorId} {
+      // Admins can do everything
+      allow create, delete: if isAdmin();
+      // Allow moderators to read the collection
+      allow list, get: if isModeratorOrAdmin();
+      // Allow moderators to update their own document
+      allow update: if isModerator() && request.auth.uid == moderatorId || isAdmin();
+    }
+    
+    // Settings collection - admin only access
+    match /settings/{document} {
+      allow read, write: if isAdmin();
+    }
+    
+    // Admin collection - admin only access
+    match /admins/{document=**} {
+      allow read, write: if isAdmin();
+    }
+    
+    // Default deny for all other collections
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

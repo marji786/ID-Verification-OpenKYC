@@ -1,58 +1,72 @@
-<h1 align="center">Welcome to OpenKYC Project!</h1>
-<p align="center">Open to everyone, easy to customize, free to build Open eKYC Project</p>
+# 🔐 IDKit - Next-Gen Identity Verification Platform
+### Transform Your KYC Process with AI-Powered Biometric Security
+
+![IDKit Overview](/public/doc/screenshot_1.png)
+
+## 🎥 See IDKit in Action
+
+[![IDKit Demo](https://img.youtube.com/vi/4po8rVoGVFo/maxresdefault.jpg)](https://www.youtube.com/watch?v=4po8rVoGVFo)
+
+> 🎬 Watch our 1-minute demo showcasing IDKit's powerful features
+
+## 🌟 Why Choose IDKit?
+
+Transform your application's identity verification process with our enterprise-grade eKYC solution. Powered by cutting-edge AI and biometric technology, IDKit ensures secure, compliant, and frictionless user verification.
+
+## 🚀 What Sets Us Apart
+
+### 🔍 Advanced eKYC Suite
+- **Real-time Document Authentication** - Instant verification of 150+ ID types
+- **AI-Powered Face Liveness** - Prevent spoofing with depth detection
+- **Smart ID-to-Selfie Matching** - 99.9% accuracy in face comparison
+
+### 🛡️ Enterprise-Grade Security
+- **Access Control** - Role-based permissions
+- **Session Intelligence** - Advanced session management
+- **Document Integrity** - ML-powered tampering detection
+
+### 🔌 Seamless Integration
+- **Developer-First API** - RESTful endpoints with comprehensive documentation
+- **Real-time Updates** - Webhook integration for instant notifications
+- **Cross-Platform Support** - Supports for all major platforms
+
+## 💫 Our Impact
+- **15 Seconds** Average Verification Time
+- **99.5%** Accuracy Rate
+- **150+** Supported ID Types
+- **50+** Countries Supported
+
+## 📸 Product Screenshots
+
 <div align="center">
-  <a href="https://join.slack.com/t/faceonlive/shared_invite/zt-2drx19c5t-vQsR4TUGPD8oL7i7BXdKZA">Slack</a>
-    ·
-   <a href="https://www.faceonlive.com/">Website</a>
-    ·
-    <a href="https://www.huggingface.co/FaceOnLive">Hugging Face</a>
-    ·
-    <a href="mailto:contact@faceonlive.com">Contact</a>
+  <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+    <img src="/public/doc/screenshot_2.png" alt="Verification Result" width="45%"/>
+    <img src="/public/doc/screenshot_3.png" alt="Face Comparison" width="45%"/>
+  </div>
+  
+  <div style="display: flex; justify-content: space-between;">
+    <img src="/public/doc/screenshot_4.png" alt="Moderators" width="45%"/>
+    <img src="/public/doc/screenshot_6.png" alt="Dashboard" width="45%"/>
+  </div>
 </div>
 
-## Try It Yourself
-- Demo hosted on HuggingFace Space: [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/FaceOnLive/OpenKYC)
+## 📚 Resources
+- [Integration Guide](https://docs.faceonlive.com/)
+- [API Documentation](https://docs.faceonlive.com/)
+- [SDK Examples](https://docs.faceonlive.com/)
 
-- Run project on Github Codespace (Click following button and when container ready, run "python app.py"
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/FaceOnLive/OpenKYC)
+## 🤝 Let's Connect
 
+Ready to revolutionize your identity verification process? Our team of experts is here to help!
 
-## In progress..
-Full On-premise Backend part including ID Document Recognition, Face Liveness Detection and Face Recognition is still in progress (Open-version).
+- 📧 **Email**: contact@faceonlive.com
+- 💬 **Live Chat**: Available on our [website](https://faceonlive.com)
+- 📱 **Demo**: Schedule a live demo [here](https://faceonlive.com)
 
-In the meantime, you can follow below steps to use our Free RapidAPI endpoints.
-
-To use our Pro-version of on-premise SDKs, please contact us.
-
-## Steps to setup project (using Free FaceOnLive RapidAPI Endpoints)
-
-1. Please subscribe following 3 RapidAPIs(Free) and get X-RapidAPI-Key there.  
-    [ID Document Recognition](https://rapidapi.com/faceonlive-inc-faceonlive-inc-default/api/id-document-recognition2/)  
-    [Face Liveness Detection](https://rapidapi.com/faceonlive-inc-faceonlive-inc-default/api/face-liveness-detection3/)  
-    [Face Recognition](https://rapidapi.com/faceonlive-inc-faceonlive-inc-default/api/face-recognition26/)
-2.  Set X-RapidAPI-Key as environment variable named API_KEY.
-3.  Install python packages from requirements.txt and run "python app.py".
-	```sh
-	export API_KEY=[X-RapidAPI-Key Here]	
-	pip install -r requirements.txt
-	python app.py
-	```
-
-## Contact
-
-Join our  <a target="_blank" href="https://join.slack.com/t/faceonlive/shared_invite/zt-2drx19c5t-vQsR4TUGPD8oL7i7BXdKZA"><img src="https://img.shields.io/badge/slack-faceonlive-blue.svg?logo=slack" alt="www.faceonlive.com"></a> to discuss project and get support.
+---
 
 <p align="center">
-<a target="_blank" href="mailto:contact@faceonlive.com"><img src="https://img.shields.io/badge/email-contact@faceonlive.com-blue.svg?logo=gmail " alt="www.faceonlive.com"></a>&emsp;
-<a target="_blank" href="https://t.me/faceonlive"><img src="https://img.shields.io/badge/telegram-@faceonlive-blue.svg?logo=telegram " alt="www.faceonlive.com"></a>&emsp;
-<a target="_blank" href="https://wa.me/+17074043606"><img src="https://img.shields.io/badge/whatsapp-faceonlive-blue.svg?logo=whatsapp " alt="www.faceonlive.com"></a>&emsp;
-<a target="_blank" href="https://huggingface.co/spaces/FaceOnLive/Face-Recognition-SDK"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue" alt="www.faceonlive.com"></a>
+Trusted by leading companies worldwide for secure and efficient identity verification
 </p>
 
-## Contributing
-Any contributions welcome. Please Star 🌟 repo if project helpful.
-Join our  [Slack](https://join.slack.com/t/faceonlive/shared_invite/zt-2drx19c5t-vQsR4TUGPD8oL7i7BXdKZA)  to discuss and get support.
-
-## On-Premises Deployment
-[Contact us](mailto:contact@faceonlive.com)  for On-Premise deployment.
- This project is community project supported by  [FaceOnLive](https://faceonlive.com/).
+---
