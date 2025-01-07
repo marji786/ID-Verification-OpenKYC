@@ -1,7 +1,7 @@
 # 🔐 IDKit - Next-Gen Identity Verification Platform
 ### Transform Your KYC Process with AI-Powered Biometric Security
 
-![IDKit Overview](/public/doc/screenshot_1.png)
+![IDKit Overview](/doc/screenshot_1.png)
 
 ## 🎥 See IDKit in Action
 
@@ -40,20 +40,19 @@ Transform your application's identity verification process with our enterprise-g
 
 <div align="center">
   <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
-    <img src="/public/doc/screenshot_2.png" alt="Verification Result" width="45%"/>
-    <img src="/public/doc/screenshot_3.png" alt="Face Comparison" width="45%"/>
+    <img src="/doc/screenshot_2.png" alt="Verification Result" width="45%"/>
+    <img src="/doc/screenshot_3.png" alt="Face Comparison" width="45%"/>
   </div>
   
   <div style="display: flex; justify-content: space-between;">
-    <img src="/public/doc/screenshot_4.png" alt="Moderators" width="45%"/>
-    <img src="/public/doc/screenshot_6.png" alt="Dashboard" width="45%"/>
+    <img src="/doc/screenshot_4.png" alt="Moderators" width="45%"/>
+    <img src="/doc/screenshot_6.png" alt="Dashboard" width="45%"/>
   </div>
 </div>
 
 ## 📚 Resources
-- [Integration Guide](https://docs.faceonlive.com/)
-- [API Documentation](https://docs.faceonlive.com/)
-- [SDK Examples](https://docs.faceonlive.com/)
+- [Integration Guide](https://docs.faceonlive.com/idkit-self-host-kyc-platform)
+- [API Documentation](https://docs.faceonlive.com/idkit-self-host-kyc-platform)
 
 ## 🤝 Let's Connect
 
