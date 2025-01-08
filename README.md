@@ -56,13 +56,13 @@ Transform your application's identity verification process with our enterprise-g
 
 // Test Credentials
 
-// Document Recognition & Liveness Server
+// Face Recognition & Livenesss Check, ID Document Recognition Server
 
 const SERVER_URL = "https://faceonlive-sdk-drl-2v-community.hf.space"
 
 const ACCESS_TOKEN = "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"
 
-// ID Liveness Server
+// ID Liveness Check Server
 
 const ID_LIVENESS_SERVER_URL = "https://faceonlive-sdk-il-2v-community.hf.space"
 
