@@ -74,7 +74,7 @@ const ID_LIVENESS_ACCESS_TOKEN = "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"
 
 ## 📚 Resources
 - [Integration Guide](https://docs.faceonlive.com/idkit-self-host-kyc-platform)
-- [API Documentation](https://docs.faceonlive.com/idkit-self-host-kyc-platform)
+- [API Documentation](https://docs.faceonlive.com/sdk-integrated-server)
 - [SDK-Integrated Server](https://faceonlive.com/projects/id-verification-sdk-suite)
 
 ## 🤝 Let's Connect
