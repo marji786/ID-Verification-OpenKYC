@@ -70,11 +70,12 @@ const ID_LIVENESS_ACCESS_TOKEN = "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"
 
 ```
 
-> Note: These are free credentials for testing purposes only. Contact us to get dedicated and on-premises server deployment for production use.
+> Note: These are free credentials for testing purposes only. [Check out our offerings](https://faceonlive.com/projects/id-verification-sdk-suite) to get dedicated and on-premises server deployment for production use.
 
 ## 📚 Resources
 - [Integration Guide](https://docs.faceonlive.com/idkit-self-host-kyc-platform)
 - [API Documentation](https://docs.faceonlive.com/idkit-self-host-kyc-platform)
+- [SDK-Integrated Server](https://faceonlive.com/projects/id-verification-sdk-suite)
 
 ## 🤝 Let's Connect
 
@@ -87,7 +88,7 @@ Ready to revolutionize your identity verification process? Our team of experts i
 ---
 
 <p align="center">
-Trusted by leading companies worldwide for secure and efficient identity verification
+FaceOnLive - Trusted by leading companies worldwide for secure and efficient identity verification
 </p>
 
 ---
