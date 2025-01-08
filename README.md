@@ -33,8 +33,8 @@ Transform your application's identity verification process with our enterprise-g
 ## 💫 Our Impact
 - **15 Seconds** Average Verification Time
 - **99.5%** Accuracy Rate
-- **150+** Supported ID Types
-- **50+** Countries Supported
+- **10000+** Supported ID Document Types
+- **200+** Countries and Regions Supported
 
 ## 📸 Product Screenshots
 
