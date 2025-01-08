@@ -50,6 +50,28 @@ Transform your application's identity verification process with our enterprise-g
   </div>
 </div>
 
+## ⚙️ Configuration
+
+```javascript
+
+// Test Credentials
+
+// Document Recognition & Liveness Server
+
+const SERVER_URL = "https://faceonlive-sdk-drl-2v-community.hf.space"
+
+const ACCESS_TOKEN = "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"
+
+// ID Liveness Server
+
+const ID_LIVENESS_SERVER_URL = "https://faceonlive-sdk-il-2v-community.hf.space"
+
+const ID_LIVENESS_ACCESS_TOKEN = "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"
+
+```
+
+> Note: These are free credentials for testing purposes only. Contact us to get dedicated and on-premises server deployment for production use.
+
 ## 📚 Resources
 - [Integration Guide](https://docs.faceonlive.com/idkit-self-host-kyc-platform)
 - [API Documentation](https://docs.faceonlive.com/idkit-self-host-kyc-platform)
