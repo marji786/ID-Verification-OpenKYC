@@ -7,7 +7,7 @@
 
 [![IDKit Demo](https://img.youtube.com/vi/4po8rVoGVFo/maxresdefault.jpg)](https://www.youtube.com/watch?v=4po8rVoGVFo)
 
-> 🎬 Watch our 1-minute demo showcasing IDKit's powerful features
+> 🎬 [Watch our 1-minute demo showcasing IDKit's powerful features](https://www.youtube.com/watch?v=4po8rVoGVFo)
 
 ## 🌟 Why Choose IDKit?
 
