@@ -15,7 +15,11 @@
 # 🔐 IDKit - Next-Gen Identity Verification Platform
 ### Transform Your KYC Process with AI-Powered Biometric Security
 
-![IDKit Overview](/doc/screenshot_1.png)
+<p align="center">
+  <img src="/doc/screenshot_1.png" width="600" alt="IDKit Overview">
+  <br>
+  <em>IDKit Overview</em>
+</p>
 
 ## 🎥 See IDKit in Action
 
@@ -31,6 +35,7 @@ Transform your application's identity verification process with our enterprise-g
 - [Integration Guide](https://docs.faceonlive.com/idkit-self-host-kyc-platform)
 - [API Documentation](https://docs.faceonlive.com/sdk-integrated-server)
 - [SDK-Integrated Server](https://faceonlive.com/projects/id-verification-sdk-suite)
+- ⭐️ Don’t forget to star this repo if you find it useful!
 
 ## ⚙️ Free Access to Community SDK-Integrated Server
 
@@ -44,7 +49,7 @@ const SERVER_URL = "https://faceonlive-sdk-drl-2v-community.hf.space"
 
 const ACCESS_TOKEN = "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"
 
-// ID Liveness Check Server
+// ID Document Liveness Check Server
 
 const ID_LIVENESS_SERVER_URL = "https://faceonlive-sdk-il-2v-community.hf.space"
 
@@ -97,8 +102,8 @@ const ID_LIVENESS_ACCESS_TOKEN = "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"
 Ready to revolutionize your identity verification process? Our team of experts is here to help!
 
 - 📧 **Email**: contact@faceonlive.com
-- 💬 **Live Chat**: Available on our [website](https://faceonlive.com)
-- 📱 **Demo**: Schedule a live demo [here](https://faceonlive.com)
+- 💬 **Support**: Available on our [website](https://faceonlive.com)
+- ⭐️ **Contribute**: Don’t forget to star this repo if you find it useful!
 
 ---
 
