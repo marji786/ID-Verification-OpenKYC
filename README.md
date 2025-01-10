@@ -30,9 +30,10 @@ Transform your application's identity verification process with our enterprise-g
 ## 🚀 What Sets Us Apart
 
 ### 🔍 Advanced eKYC Suite
-- **Real-time Document Authentication** - Instant verification of 150+ ID types
+- **Real-time Document Authentication** - Instant verification of 10000+ ID types from 200+ countries and regions
 - **AI-Powered Face Liveness** - Prevent spoofing with depth detection
 - **Smart ID-to-Selfie Matching** - 99.9% accuracy in face comparison
+- **ID Document Liveness Detection** - AI-Powered Document Authenticity Check
 
 ### 🛡️ Enterprise-Grade Security
 - **Access Control** - Role-based permissions
