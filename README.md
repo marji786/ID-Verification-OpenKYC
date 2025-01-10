@@ -27,6 +27,33 @@
 
 Transform your application's identity verification process with our enterprise-grade eKYC solution. Powered by cutting-edge AI and biometric technology, IDKit ensures secure, compliant, and frictionless user verification.
 
+## 📚 Resources
+- [Integration Guide](https://docs.faceonlive.com/idkit-self-host-kyc-platform)
+- [API Documentation](https://docs.faceonlive.com/sdk-integrated-server)
+- [SDK-Integrated Server](https://faceonlive.com/projects/id-verification-sdk-suite)
+
+## ⚙️ Free Access to Community SDK-Integrated Server
+
+```javascript
+
+// Test Credentials
+
+// Face Recognition & Livenesss Check, ID Document Recognition Server
+
+const SERVER_URL = "https://faceonlive-sdk-drl-2v-community.hf.space"
+
+const ACCESS_TOKEN = "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"
+
+// ID Liveness Check Server
+
+const ID_LIVENESS_SERVER_URL = "https://faceonlive-sdk-il-2v-community.hf.space"
+
+const ID_LIVENESS_ACCESS_TOKEN = "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"
+
+```
+
+> Note: These are free credentials for testing purposes only. [Check out our offerings](https://faceonlive.com/projects/id-verification-sdk-suite) to get dedicated and on-premises server deployment for production use.
+
 ## 🚀 What Sets Us Apart
 
 ### 🔍 Advanced eKYC Suite
@@ -65,33 +92,6 @@ Transform your application's identity verification process with our enterprise-g
   </div>
 </div>
 
-## ⚙️ Configuration
-
-```javascript
-
-// Test Credentials
-
-// Face Recognition & Livenesss Check, ID Document Recognition Server
-
-const SERVER_URL = "https://faceonlive-sdk-drl-2v-community.hf.space"
-
-const ACCESS_TOKEN = "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"
-
-// ID Liveness Check Server
-
-const ID_LIVENESS_SERVER_URL = "https://faceonlive-sdk-il-2v-community.hf.space"
-
-const ID_LIVENESS_ACCESS_TOKEN = "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"
-
-```
-
-> Note: These are free credentials for testing purposes only. [Check out our offerings](https://faceonlive.com/projects/id-verification-sdk-suite) to get dedicated and on-premises server deployment for production use.
-
-## 📚 Resources
-- [Integration Guide](https://docs.faceonlive.com/idkit-self-host-kyc-platform)
-- [API Documentation](https://docs.faceonlive.com/sdk-integrated-server)
-- [SDK-Integrated Server](https://faceonlive.com/projects/id-verification-sdk-suite)
-
 ## 🤝 Let's Connect
 
 Ready to revolutionize your identity verification process? Our team of experts is here to help!
@@ -102,8 +102,6 @@ Ready to revolutionize your identity verification process? Our team of experts i
 
 ---
 
-<p align="center">
-FaceOnLive - Trusted by leading companies worldwide for secure and efficient identity verification
-</p>
+[FaceOnLive](https://faceonlive.com) - Trusted by leading companies worldwide for secure and efficient on-premises identity verification solutions
 
 ---
